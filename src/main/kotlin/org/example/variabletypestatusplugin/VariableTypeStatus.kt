@@ -38,7 +38,7 @@ class VariableTypeStatusWidget(private val project: Project) : StatusBarWidget, 
     private var currentText: String = "Type: unknown"
 
     init {
-        // Nasłuchujemy zmiany pozycji kursora
+        //Listen to cursor position change
         val editorEventMulticaster = EditorFactory.getInstance().eventMulticaster
         editorEventMulticaster.addCaretListener(object : CaretListener {
             override fun caretPositionChanged(event: CaretEvent) {
@@ -89,7 +89,7 @@ class VariableTypeStatusWidget(private val project: Project) : StatusBarWidget, 
             "Type: unknown"
         }
 
-        // Aktualizujemy widget w status barze
+        // Update the widget in status bar
         UIUtil.invokeLaterIfNeeded {
             statusBar?.updateWidget(ID())
         }
