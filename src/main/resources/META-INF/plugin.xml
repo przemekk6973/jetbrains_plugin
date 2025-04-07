@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>org.example.VariableTypeStatusPlugin</id>
+    <name>VariableTypeStatusPlugin</name>
+    <vendor email="przemek.kukla0703@gmail.com" url="https://www.yourcompany.com">przemekk6973</vendor>
+
+    <description><![CDATA[
+        Plugin that shows the type of the Python variable under the caret in the status bar.<br>
+        Useful when navigating dynamically typed code.<br>
+        <em>Supports Python in PyCharm-based IDEs</em>
+    ]]></description>
+
+    <idea-version since-build="232" until-build="242.*" />
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>Pythonid</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <statusBarWidgetFactory
+                id="VariableTypeStatus"
+                implementation="org.example.variabletypestatusplugin.VariableTypeStatus" />
+    </extensions>
+</idea-plugin>
