@@ -67,7 +67,7 @@ class VariableTypeStatusWidget(private val project: Project) : StatusBarWidget, 
             return
         }
 
-        // Szukamy zmiennej lub referencji
+        // We search for variable or reference
         val variable = PsiTreeUtil.getParentOfType(
             element,
             PyReferenceExpression::class.java,
